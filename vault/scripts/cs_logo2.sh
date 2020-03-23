@@ -7,13 +7,19 @@ for i in *; do
 
 echo "==========================="
 
-# echo $x
-# echo $y
-echo $y "-->" $logo_fn
+a="CS Logo (no bg).png"
+b="CS Logo"
 
-sed -i 's/CS Logo (no bg).png/CS Logo/g' "$i/$i.ipynb"
+cp "$i/$i.ipynb" tmp
+
+sed "s?$a?$b?g" <tmp >"$i/$i.ipynb"
+
 
 done
+
+
+
+
 
 
 
